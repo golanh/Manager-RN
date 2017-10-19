@@ -16,9 +16,7 @@ export default (state, action) => {
         case LOGIN_SUCCESS:
         case EMPLOYEE_CREATE:
         case EMPLOYEE_DELETED:
-        case EMPLOYEE_SAVED: {
-            console.log('nav');
-            
+        case EMPLOYEE_SAVED: {           
             const resetAction = NavigationActions.reset({
                 index: 0,
                 actions: [

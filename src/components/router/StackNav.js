@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { BackHandler } from 'react-native';
 import { addNavigationHelpers } from 'react-navigation';
 import { connect } from 'react-redux';
@@ -22,16 +22,17 @@ class StackNav extends Component {
 
   render() {
     const { dispatch, navigation } = this.props;
+    console.log(this.props);
     return (
       <StackConfig
         ref={(ref) => { this.navigator = ref; }}
         screenProps={this.props}
         navigation={
           addNavigationHelpers({
-            dispatch,
+            dispatch: this.props.goBack,
             state: navigation,
           })
-        }       
+        }
       />
     );
   }

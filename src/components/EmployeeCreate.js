@@ -1,5 +1,6 @@
 //import liraries
 import React, { Component } from 'react';
+import { TouchableWithoutFeedback, Keyboard } from 'react-native';
 import { connect } from 'react-redux';
 
 import { employeeUpdate, employeeCreate } from '../actions/index';
@@ -23,7 +24,8 @@ class EmployeeCreate extends Component {
     render() {
         // console.log('create form');
         return (
-            <Card>
+            <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+            <Card style={{ flex: 1 }}>
                 <EmployeeForm {...this.props} />
 
                 <CardSection>
@@ -32,6 +34,7 @@ class EmployeeCreate extends Component {
                     </Button>
                 </CardSection>
             </Card>
+            </TouchableWithoutFeedback>
         );
     }
 }

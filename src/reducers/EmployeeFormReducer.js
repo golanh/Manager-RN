@@ -1,4 +1,4 @@
-import { EMPLOYEE_UPDATE, EMPLOYEE_CREATE, EDIT_EMPLOYEE, EMPLOYEE_SAVED, EMPLOYEE_DELETED } from '../actions/types';
+import { EMPLOYEE_UPDATE, EMPLOYEE_CREATE, EDIT_EMPLOYEE, EMPLOYEE_SAVED, EMPLOYEE_DELETED, BACK } from '../actions/types';
 
 const INITIAL_STATE = {
     name: '',
@@ -15,7 +15,7 @@ export default (state = INITIAL_STATE, action) => {
         case EMPLOYEE_CREATE:
         case EMPLOYEE_DELETED:
         case EMPLOYEE_SAVED:
-        console.log('form');
+        case BACK:
             return INITIAL_STATE;
 
         case EDIT_EMPLOYEE:
